@@ -1,0 +1,58 @@
+body {
+    background: #ecf0f1;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Styles */
+hr.star {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+/* navbar styling begin */
+.navbar {
+    background: #34495e;
+    padding: 20px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: rgb(216, 213, 208);
+    font-size: 1.5em;
+}
+
+.navbar .navbar-brand {
+    color: rgb(216, 213, 208);
+    font-size: 2em;
+    font-weight: 900;
+    font-weight: bolder;
+}
+.navbar .navbar-brand:hover {
+    color: 1abc9c;
+}
+/* navbar styling end */
+
+/* Header styling start */
+#header {
+    background: #ecf0f1;
+    color: #34495e;
+}
+
+.title {
+    font-size: 6em;
+}
+
+#header .skills {
+    font-size: 2em;
+}
+
+#header hr.star::after {
+    color: #fff;
+    content: "\2605";
+    position: relative;
+    top: 0.8em;
+    padding: 0.25em;
+    font-size: 2.5em;
+}
+
