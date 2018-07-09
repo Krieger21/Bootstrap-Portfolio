@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
      <!-- Navbar begin -->   
@@ -27,9 +28,9 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav pull-right">
-                      <li><a href="#">Portfolio</a></li>
-                      <li><a href="#">Contact</a></li>
-                      <li><a href="#">About Me</a></li>
+                      <li><a href="#" id="me">About Me</a></li>
+                      <li><a href="#" id="portfolio">Portfolio</a></li>
+                      <li><a href="#" id="contact">Contact</a></li>
                       
                     </ul>
                      
@@ -50,12 +51,12 @@
                 <div class="col-md-12">
                     <div class="margin"></div>
 
-                    <h1 class="title">Colten Krieg</h1>
+                    <h1 class="title" id="beginning">Colten Krieg</h1>
                     <hr class="star"><hr>
                     
 
                     <h2 class="skills">Web Developer & Designer</h2>
-                    <img src="http://placehold.it/600x800" width="600" height="800" alt="my-photo" style="padding-top: 100px">
+                    <img src="https://media.licdn.com/dms/image/C5103AQEJ0Sgj3SNJng/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=O7GmT1nrSuYbIyimPrCSwqqIAkO9J-VVTQwNE2vIy4A" width="500" height="600" alt="my-photo" style="padding-top: 100px">
                 </div>
 
             </div>
@@ -91,31 +92,47 @@
         <br>
         <br>
         <br>
-
-        <h3 class="title">Portfolio</h3>
+        <h3 class="title" id="middle">Portfolio</h3>
         <hr class="star"><hr>
 
         <div class="row">
           
             <div class="col-md-4">
-                <img src="https://images.pexels.com/photos/7554/controller-pad-afternoon-xbox.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb/360x250" width="350" height="250" alt="portfolio-item">
+                <img src="https://images.pexels.com/photos/7554/controller-pad-afternoon-xbox.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb/360x250" class="img" width="350" height="250" alt="https://krieger21.github.io/week-4-game/">
                 <h4>Crystal Collector Game</h4>
             </div>
             <div class="col-md-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgKJuogyn9dVdd5fK_hbclR3PAI1cmFTC9jtul9m5_gE8rcDL/360x250" width="350" height="250" alt="portfolio-item">
-                    <h4>Staying in or Going Out App</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLn_y5PN1VtY66YNDjl00lozzAbe_NX6P1-FOf6gZFczDWRL7K" class="img" width="350" height="250" alt="https://krieger21.github.io/Meme-app/">
+                    <h4>MEME Finder</h4>
             </div>
             <div class="col-md-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1VQpNKAUP6vU5ly3phMJMQ1gGguPC1ByR3PMfmLwtlJamMKH/360x250" width="350" height="250" alt="portfolio-item">
-                    <h4>Meme Generating App</h4>
+                    <img src="https://images.freeimages.com/images/small-previews/404/gingerlicious-1571480.jpg" class="img" width="350" height="250" alt="https://drink-alert.herokuapp.com/">
+                    <h4>Drink Alert Application</h4>
             </div>
         </div>
     </div>
 
 </section>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- Contact -->
     
     <div class="container nomargin">
@@ -128,7 +145,7 @@
                 <div class="col-md-12">
                     <div class="margin"></div>
 
-                    <h1 class="title">Contact</h1>
+                    <h1 class="title" id="end">Contact</h1>
                     <hr class="star"><hr>
                     
                     <h2> <a href="https://www.linkedin.com/in/coltenkrieg/">LinkedIn Profile</a> </h2>
@@ -144,6 +161,35 @@
     </section>
  
 </div>
+
+<script>
+    $(document).ready(function(){
+    $(".img").on("click", function(){
+        let id = this.alt
+        location.href = id
+        console.log("clicked")
+    })
+
+    $("#portfolio").on("click", function(){
+        $('html,body').animate({
+        scrollTop: $("#middle").offset().top},
+        'slow');
+    })
+
+      $("#me").on("click", function(){
+        $('html,body').animate({
+        scrollTop: $("#beginning").offset().top},
+        'slow');
+    })
+
+      $("#contact").on("click", function(){
+        $('html,body').animate({
+        scrollTop: $("#end").offset().top},
+        'slow');
+    })
+
+})
+</script>
 
 </body>
 </html>
